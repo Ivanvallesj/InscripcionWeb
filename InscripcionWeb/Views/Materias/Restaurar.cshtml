@@ -1,0 +1,26 @@
+﻿@model InscripcionWeb.Models.Materia
+
+@{ ViewData["Title"] = "Restaurar"; }
+
+<h1>Delete</h1>
+
+<h3>Esta seguro que quiere restaurar esta materia? </h3>
+<div>
+    <h4>Materia</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+    </dl>
+
+    <form asp-action="Restaurar">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Restaurar" class="btn btn-success" /> |
+        <a asp-action="IndexEliminados">Volver a la listado de eliminados</a>
+    </form>
+</div>
+
